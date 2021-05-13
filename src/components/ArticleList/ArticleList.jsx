@@ -6,7 +6,7 @@ function ArticleList({articles}) {
   return (
     <div>
       <ul aria-label="article-list">
-        {articles.map(article => <Article {...article}/>)}
+        {articles.map(article => <li key={`${article.title}${article.description}`}><Article {...article}/></li>)}
       </ul>
     </div>
   )
