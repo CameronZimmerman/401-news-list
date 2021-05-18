@@ -22,7 +22,7 @@ describe('NewsSearch component', () => {
 
     await waitFor(() => {
       const articles = screen.getAllByText('May 2021', { exact: false})
-      expect(articles).not.toBeEmptyDOMElement()
+      expect(articles.length).toBeGreaterThan(0)
     })
 
     console.log(input);
